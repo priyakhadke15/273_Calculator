@@ -1,23 +1,18 @@
-import React, { component } from 'react';
+import React from 'react';
 import './App.css';
+import Result from './components/Result';
+import Keypad from './components/Keypad';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Calculator</h1>
+        <Result /><br></br>
+        <div ><Keypad /></div>
       </header>
     </div>
+
   );
 }
 
