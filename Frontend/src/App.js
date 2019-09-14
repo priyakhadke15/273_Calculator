@@ -3,13 +3,10 @@ import Calculator from './components/Calculator';
 import './App.css';
 //import { Route } from 'react-router-dom';
 
-
-
 class App extends Component {
   constructor() {
     super();
   }
-
 
   render() {
     return (
@@ -18,8 +15,6 @@ class App extends Component {
           <h1>Calculator</h1>
           <Calculator /><br></br>
         </header>
-        {/* Render Different Component based on Route
-        <Route path="/" component={Calculator} /> */}
       </div>
 
     );

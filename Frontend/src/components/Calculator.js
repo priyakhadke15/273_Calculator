@@ -20,12 +20,36 @@ class Calculator extends Component {
     }
 
     keyPress(key) {
-        let disp = this.state.result + key;
+        let disp = this.state.result;
+        let url = 'http://localhost:3001/calculate'
         if (key == '=') {
-            alert("Equals");
+
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ exp: disp })
+            }).then(function (response) {
+                return response.json();
+            }).then(function (data) {
+                console.log(data);
+                this.updateDisplay(data.result);
+            }).catch(function (data) {
+                this.updateDisplay(data.result);
+            }.bind(this));
+
+
+
+
         }
-        else
-            this.updateDisplay(disp)
+
+        else {
+            disp = this.state.result + key;
+            this.updateDisplay(disp);
+        }
+
     }
 }
 export default Calculator;
