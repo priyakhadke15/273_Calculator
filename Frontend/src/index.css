@@ -22,7 +22,8 @@ button {
 
 input{
   height: 40px;
-  width: 150px;
+  width: 180px;
+  font-size: large;
 }
 
 
