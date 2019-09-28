@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Calculator from './components/Calculator';
 import './App.css';
-//import { Route } from 'react-router-dom';
 
 class App extends Component {
   constructor() {

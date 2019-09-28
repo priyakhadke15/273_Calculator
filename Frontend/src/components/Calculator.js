@@ -36,13 +36,9 @@ class Calculator extends Component {
             }).then(function (data) {
                 console.log(data);
                 this.updateDisplay(data.result);
-            }).catch(function (data) {
+            }.bind(this)).catch(function (data) {
                 this.updateDisplay(data.result);
             }.bind(this));
-
-
-
-
         }
 
         else {
